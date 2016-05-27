@@ -55,10 +55,9 @@ public class Candies {
 
     private static int[] findHigherRatingReverse(int start, int end, int[] ratings, int[] candies) {
         if (start == end) return candies;
-        candies[start - 1] = (ratings[start - 1] > ratings[start]) ? (candies[start - 1] > candies[start]) ?
-                candies[start - 1]
-                : candies[start] + 1
-                : candies[start - 1];
+        candies[start - 1] = (ratings[start - 1] > ratings[start]
+                && !(candies[start - 1] > candies[start]))
+                ? candies[start] + 1 : candies[start - 1];
         return findHigherRatingReverse(--start, end, ratings, candies);
     }
 }
