@@ -6,19 +6,6 @@ import java.util.Scanner;
  * Created by brianmomongan on 27/05/16.
  */
 
-/*
-9
-5
-3
-8
-1
-2
-4
-4
-9
-0
-*
-* */
 public class Candies {
 
     public static void main(String[] args) {
